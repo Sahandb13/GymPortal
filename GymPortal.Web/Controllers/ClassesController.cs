@@ -2,14 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GymPortal.Web.Controllers
 {
-    public class HomeController : Controller
+    public class ClassesController : Controller
     {
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult NotFound()
         {
             return View();
         }

@@ -28,6 +28,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseStatusCodePages(async context =>
+{
+    context.HttpContext.Response.Redirect("/Home/NotFound");
+});
+
 app.UseRouting();
 
 app.UseAuthentication();
