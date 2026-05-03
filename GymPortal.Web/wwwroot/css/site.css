@@ -72,13 +72,35 @@ a {
     font-weight: 600;
 }
 
-.signin-btn {
+.signin-btn,
+.btn-primary,
+.get-started,
+.lime-btn {
     background: #d7ff00;
     color: #111;
-    padding: 13px 24px;
     border-radius: 999px;
-    font-size: 13px;
     font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+}
+
+.signin-btn {
+    padding: 13px 24px;
+    font-size: 13px;
+}
+
+.btn-primary,
+.lime-btn {
+    padding: 12px 22px;
+}
+
+.btn-dark {
+    background: white;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
 }
 
 /* HERO */
@@ -150,15 +172,9 @@ a {
 }
 
 .get-started {
-    background: #d7ff00;
-    color: #111;
     padding: 16px 30px;
-    border-radius: 999px;
     font-size: 14px;
-    font-weight: 800;
-    display: inline-flex;
     gap: 15px;
-    align-items: center;
 }
 
 .hero-people {
@@ -201,96 +217,139 @@ a {
 }
 
 /* ABOUT */
-.about-block {
-    padding: 80px 9%;
+.about-figma {
+    background: #f4f4f4;
+    padding: 100px 120px;
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 80px;
+    grid-template-columns: 520px 1fr;
+    gap: 100px;
     align-items: center;
 }
 
-.about-images {
+.about-photo-wrap {
+    position: relative;
     display: flex;
-    gap: 18px;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-.about-images div {
-    width: 180px;
-    height: 330px;
-    background: #171717;
-    border-radius: 20px;
-    transform: skew(-8deg);
+.about-photo {
+    background: #222;
+    color: #d7ff00;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skew(-6deg);
+    overflow: hidden;
 }
 
-.about-images div:nth-child(2) {
-    margin-top: 50px;
-    background: #303030;
+.photo-one {
+    width: 210px;
+    height: 380px;
+    margin-top: 40px;
 }
 
-.pill {
+.photo-two {
+    width: 280px;
+    height: 420px;
+}
+
+.checker {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    width: 110px;
+    height: 90px;
+    background:
+        linear-gradient(45deg, #111 25%, transparent 25%) 0 0 / 18px 18px,
+        linear-gradient(45deg, transparent 75%, #111 75%) 0 0 / 18px 18px;
+}
+
+.about-copy {
+    max-width: 640px;
+    margin-top: 20px;
+}
+
+.about-pill,
+.program-pill {
     display: inline-block;
-    background: #111018;
+    background: #171720;
     color: white;
     border-radius: 999px;
-    padding: 8px 16px;
-    font-size: 13px;
-    margin-bottom: 16px;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.about-text h2 {
-    font-size: 46px;
+.about-copy h2 {
+    font-size: 56px;
     line-height: 1.05;
-    margin: 16px 0;
+    margin: 0 0 24px;
+    color: #222;
+    font-weight: 900;
 }
 
-.about-text p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
+.about-copy p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.7;
+    max-width: 600px;
 }
 
-.quote {
-    margin-top: 26px;
+.about-quote {
+    margin-top: 40px;
     background: white;
     border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 16px 35px rgba(0,0,0,.08);
-    font-weight: 700;
+    padding: 30px 40px;
+    max-width: 620px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 800;
 }
 
 /* PROGRAMS */
-.programs {
-    width: 96%;
-    margin: 30px auto;
-    background: white;
-    border-radius: 22px;
-    padding: 70px 9%;
+.programs-figma {
+    background: #ffffff;
+    margin: 40px auto;
+    width: 92%;
+    border-radius: 20px;
+    padding: 70px 60px;
     text-align: center;
 }
 
-.programs h2 {
-    font-size: 46px;
-    line-height: 1.05;
-    margin: 16px 0;
+.programs-figma h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 40px;
+    color: #222;
+    font-weight: 800;
 }
 
-.program-cards {
-    margin-top: 36px;
+.program-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 26px;
+    gap: 28px;
 }
 
-.program-cards div {
+.program-card {
     height: 260px;
-    border-radius: 20px;
-    background: #171717;
+    border-radius: 18px;
+    background: #1b1b1b;
     color: #d7ff00;
     display: flex;
-    align-items: end;
-    padding: 24px;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
     font-weight: 800;
-    font-size: 20px;
+}
+
+.program-sub {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666;
 }
 
 /* SHARED */
@@ -305,24 +364,6 @@ a {
     padding: 38px;
     border-radius: 12px;
     text-align: center;
-}
-
-.btn-primary {
-    background: #d7ff00;
-    color: black;
-    padding: 12px 22px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.btn-dark {
-    background: white;
-    color: black;
-    padding: 12px 22px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
 }
 
 /* FOOTER */
@@ -353,4 +394,51 @@ a {
     text-align: center;
     font-size: 12px;
     color: #ccc;
+}
+
+.products-figma {
+    width: 92%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.product-pill {
+    display: inline-block;
+    background: #111018;
+    color: white;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.products-figma h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    height: 160px;
+    border-radius: 16px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.product-sub {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #777;
 }
