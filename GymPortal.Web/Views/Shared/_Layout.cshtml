@@ -4,59 +4,72 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoreFitness</title>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
+
 <body>
-
-<header class="top-nav">
-    <a href="/" class="brand">
-        <span class="brand-icon">✣</span>
-        CoreFitness
-    </a>
-
-    <nav class="main-nav">
-        <a href="/">Fitness Centers</a>
-        <a href="/Membership">Memberships</a>
-        <a href="/Classes">Training</a>
-        <a href="/CustomerService">Customer Service</a>
-        <a href="/Shop">Store</a>
-    </nav>
-
-    <div class="nav-right">
-        <a href="/Account/Register" class="become-link">Become Member</a>
-        <a href="/Account/Login" class="signin-btn">Sign In <span>›</span></a>
-    </div>
-</header>
-
-<main>
-    @RenderBody()
-</main>
-
-<footer class="footer">
-    <div class="footer-top">
-        <div class="brand">
+    <!-- Site header -->
+    <header class="top-nav">
+        <a href="/" class="brand">
             <span class="brand-icon">✣</span>
-            CoreFitness
+            <span>CoreFitness</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="/">Fitness Centers</a>
+            <a href="/Membership">Memberships</a>
+            <a href="/Classes">Training</a>
+            <a href="/CustomerService">Customer Service</a>
+            <a href="/Shop">Store</a>
+        </nav>
+
+        <div class="nav-right">
+            <a href="/Account/Register" class="become-link">Become Member</a>
+            <a href="/Account/Login" class="signin-btn">
+                Sign In <span>›</span>
+            </a>
         </div>
-        <h3>Empowering Your Fitness Journey with Expert<br />Training and Lasting Results</h3>
-    </div>
+    </header>
 
-    <div class="footer-content">
-        <div>
-            <h4>Our Location</h4>
-            <p>Our supportive and knowledgeable trainers work<br />with members to provide encouragement.</p>
-            <p>📍 Stockholm Wellness Center, Sweden</p>
+    <!-- Page content -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Site footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="brand">
+                <span class="brand-icon">✣</span>
+                <span>CoreFitness</span>
+            </div>
+
+            <h3>
+                Empowering Your Fitness Journey with Expert<br />
+                Training and Lasting Results
+            </h3>
         </div>
 
-        <div>
-            <h4>Working Hours</h4>
-            <p>Mon - Fri: 06:00 - 20:00</p>
-            <p>Saturday: 08:00 - 16:00</p>
+        <div class="footer-content">
+            <div>
+                <h4>Our Location</h4>
+                <p>
+                    Our supportive and knowledgeable trainers work<br />
+                    with members to provide encouragement.
+                </p>
+                <p>📍 Stockholm Wellness Center, Sweden</p>
+            </div>
+
+            <div>
+                <h4>Working Hours</h4>
+                <p>Mon - Fri: 06:00 - 20:00</p>
+                <p>Saturday: 08:00 - 16:00</p>
+            </div>
         </div>
-    </div>
 
-    <p class="copyright">© 2026 Core Fitness Gym. All Rights Reserved.</p>
-</footer>
-
+        <p class="copyright">
+            © 2026 Core Fitness Gym. All Rights Reserved.
+        </p>
+    </footer>
 </body>
 </html>

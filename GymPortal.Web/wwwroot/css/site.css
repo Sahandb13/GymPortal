@@ -1,3 +1,6 @@
+/* =========================
+   Base
+========================= */
 * {
     box-sizing: border-box;
 }
@@ -13,7 +16,9 @@ a {
     text-decoration: none;
 }
 
-/* NAVBAR */
+/* =========================
+   Navigation
+========================= */
 .top-nav {
     width: 100%;
     height: 72px;
@@ -23,7 +28,7 @@ a {
     display: grid;
     grid-template-columns: 260px 1fr 260px;
     align-items: center;
-    border-bottom: 1px solid rgba(215,255,0,0.12);
+    border-bottom: 1px solid rgba(215, 255, 0, 0.12);
 }
 
 .brand {
@@ -53,7 +58,8 @@ a {
     gap: 34px;
 }
 
-.main-nav a {
+.main-nav a,
+.become-link {
     color: white;
     font-size: 13px;
     font-weight: 600;
@@ -66,12 +72,9 @@ a {
     gap: 28px;
 }
 
-.become-link {
-    color: white;
-    font-size: 13px;
-    font-weight: 600;
-}
-
+/* =========================
+   Buttons
+========================= */
 .signin-btn,
 .btn-primary,
 .get-started,
@@ -89,6 +92,12 @@ a {
     font-size: 13px;
 }
 
+.get-started {
+    padding: 16px 30px;
+    font-size: 14px;
+    gap: 15px;
+}
+
 .btn-primary,
 .lime-btn {
     padding: 12px 22px;
@@ -103,7 +112,9 @@ a {
     display: inline-block;
 }
 
-/* HERO */
+/* =========================
+   Home: Hero
+========================= */
 .hero-figma {
     min-height: 720px;
     background:
@@ -122,14 +133,23 @@ a {
     margin-top: -20px;
 }
 
-.hero-pill {
+.hero-pill,
+.about-pill,
+.program-pill,
+.product-pill {
     display: inline-block;
-    background: #242431;
+    background: #171720;
     color: white;
-    padding: 7px 14px;
     border-radius: 999px;
+    padding: 8px 18px;
     font-size: 12px;
     font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-pill {
+    background: #242431;
+    padding: 7px 14px;
     margin-bottom: 22px;
 }
 
@@ -143,7 +163,7 @@ a {
 
 .hero-figma p {
     max-width: 610px;
-    color: #eeeeee;
+    color: #eee;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -171,28 +191,24 @@ a {
     margin-bottom: 36px;
 }
 
-.get-started {
-    padding: 16px 30px;
-    font-size: 14px;
-    gap: 15px;
-}
-
 .hero-people {
-    height: 650px;
-    align-self: end;
     display: flex;
+    align-self: end;
     align-items: flex-end;
     justify-content: center;
+    height: 650px;
 }
 
 .hero-people img {
-    height: 600px;
+    display: block;
     width: 520px;
-    object-fit: cover;
-    object-position: center;
+    height: 600px;
+    object-fit: contain;
 }
 
-/* LIME BAR */
+/* =========================
+   Home: Lime bar
+========================= */
 .lime-bar {
     width: 100%;
     background: #d7ff00;
@@ -216,7 +232,9 @@ a {
     font-weight: 900;
 }
 
-/* ABOUT */
+/* =========================
+   Home: About
+========================= */
 .about-figma {
     background: #f4f4f4;
     padding: 100px 120px;
@@ -242,6 +260,12 @@ a {
     justify-content: center;
     transform: skew(-6deg);
     overflow: hidden;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .photo-one {
@@ -271,18 +295,6 @@ a {
     margin-top: 20px;
 }
 
-.about-pill,
-.program-pill {
-    display: inline-block;
-    background: #171720;
-    color: white;
-    border-radius: 999px;
-    padding: 8px 18px;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
 .about-copy h2 {
     font-size: 56px;
     line-height: 1.05;
@@ -310,9 +322,11 @@ a {
     font-weight: 800;
 }
 
-/* PROGRAMS */
+/* =========================
+   Home: Programs
+========================= */
 .programs-figma {
-    background: #ffffff;
+    background: white;
     margin: 40px auto;
     width: 92%;
     border-radius: 20px;
@@ -320,7 +334,8 @@ a {
     text-align: center;
 }
 
-.programs-figma h2 {
+.programs-figma h2,
+.products-figma h2 {
     font-size: 42px;
     line-height: 1.1;
     margin: 0 0 40px;
@@ -344,15 +359,59 @@ a {
     justify-content: center;
     padding: 20px;
     font-weight: 800;
+    overflow: hidden;
 }
 
-.program-sub {
+.program-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.program-sub,
+.product-sub {
     margin-top: 30px;
     font-size: 13px;
     color: #666;
 }
 
-/* SHARED */
+/* =========================
+   Home: Products
+========================= */
+.products-figma {
+    width: 92%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    height: 160px;
+    border-radius: 16px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 22px;
+}
+
+/* =========================
+   Shared cards
+========================= */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -366,7 +425,9 @@ a {
     text-align: center;
 }
 
-/* FOOTER */
+/* =========================
+   Footer
+========================= */
 .footer {
     width: 96%;
     margin: 50px auto 30px;
@@ -394,51 +455,4 @@ a {
     text-align: center;
     font-size: 12px;
     color: #ccc;
-}
-
-.products-figma {
-    width: 92%;
-    margin: 50px auto;
-    text-align: center;
-}
-
-.product-pill {
-    display: inline-block;
-    background: #111018;
-    color: white;
-    border-radius: 999px;
-    padding: 8px 16px;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.products-figma h2 {
-    font-size: 42px;
-    line-height: 1.1;
-    margin-bottom: 40px;
-    font-weight: 800;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
-
-.product-card {
-    height: 160px;
-    border-radius: 16px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.product-sub {
-    margin-top: 25px;
-    font-size: 13px;
-    color: #777;
 }
