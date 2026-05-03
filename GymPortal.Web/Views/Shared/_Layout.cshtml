@@ -3,39 +3,64 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GymPortal</title>
+    <title>CoreFitness</title>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">GymPortal</div>
+<header class="navbar">
+    <a href="/" class="logo">
+        <span class="logo-icon">✦</span>
+        CoreFitness
+    </a>
 
-            <nav>
-                <a href="/">Home</a>
-                <a href="/Membership">Memberships</a>
-                <a href="/Classes">Classes</a>
-                <a href="/Account">My Account</a>
-            </nav>
+    <nav class="nav-menu">
+        <a href="/">Fitness Centers</a>
+        <a href="/Membership">Memberships</a>
+        <a href="/Classes">Training</a>
+        <a href="/CustomerService">Customer Service</a>
+        <a href="/Shop">Shop</a>
+    </nav>
 
-            <div class="nav-actions">
-                <a href="/Account/Login" class="btn-outline">Sign In</a>
-                <a href="/Account/Register" class="btn-primary">Join Now</a>
-            </div>
+    <div class="nav-actions">
+        <a href="/Account/Register" class="nav-link-small">Become Member</a>
+        <a href="/Account/Login" class="btn-primary">Sign In</a>
+    </div>
+</header>
+
+<main>
+    @RenderBody()
+</main>
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            CoreFitness
         </div>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        @RenderBody()
-    </main>
+        <h3>Empowering Your Fitness Journey with Expert<br />Training and Lasting Results</h3>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2026 GymPortal. All rights reserved.</p>
-    </footer>
+    <div class="footer-content">
+        <div>
+            <h4>Our Location</h4>
+            <p>Our supportive and knowledgeable trainers work<br />with members to provide encouragement.</p>
+            <p>📍 Stockholm Wellness Center, Sweden</p>
+        </div>
+
+        <div>
+            <h4>Working Hours</h4>
+            <p>Mon - Fri: 06:00 - 20:00</p>
+            <p>Saturday: 08:00 - 16:00</p>
+
+            <h4>Opening Hours</h4>
+            <p>Mon - Sun: 24/7</p>
+        </div>
+    </div>
+
+    <p class="copyright">© 2026 Core Fitness Gym. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>

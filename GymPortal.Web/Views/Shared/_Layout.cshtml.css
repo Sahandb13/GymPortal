@@ -1,48 +1,282 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿* {
+    box-sizing: border-box;
+}
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
 }
 
 a {
-  color: #0077cc;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 96%;
+    margin: 12px auto 0;
+    background: #101018;
+    color: white;
+    border-radius: 10px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    background: #d7ff00;
+    color: #111;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: white;
+    font-size: 14px;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-link-small {
+    color: white;
+    font-size: 13px;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    background: #d7ff00;
+    color: #111;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    border: none;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.btn-dark {
+    background: #111;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+/* HOME */
+.home-hero {
+    width: 96%;
+    margin: 0 auto;
+    min-height: 500px;
+    background: #101018;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 75px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.hero-left {
+    max-width: 560px;
+}
+
+.tag {
+    display: inline-block;
+    background: #23232b;
+    color: white;
+    font-size: 12px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.home-hero h1 {
+    font-size: 52px;
+    line-height: 1.05;
+    margin: 0 0 20px;
+}
+
+.home-hero p {
+    color: #d8d8d8;
+    line-height: 1.6;
+}
+
+.hero-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 28px 0 35px;
+    font-size: 14px;
+}
+
+.hero-points span::before {
+    content: "✦ ";
+    color: #d7ff00;
+}
+
+.person-placeholder {
+    width: 360px;
+    height: 420px;
+    border: 2px solid #d7ff00;
+    border-radius: 14px;
+    color: #d7ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* BRAND STRIP */
+.brand-strip {
+    width: 96%;
+    margin: 8px auto 55px;
+    background: #d7ff00;
+    border-radius: 8px;
+    padding: 20px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-strip span {
+    font-weight: 700;
+}
+
+.brand-strip strong {
+    font-size: 30px;
+}
+
+/* ABOUT SECTION */
+.journey-section {
+    padding: 35px 10% 65px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.journey-images {
+    display: flex;
+    gap: 16px;
+}
+
+.slanted-img {
+    width: 155px;
+    height: 275px;
+    background: #171717;
+    color: #d7ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skew(-10deg);
+}
+
+.slanted-img.second {
+    margin-top: 42px;
+}
+
+.journey-text {
+    max-width: 540px;
+}
+
+.tag.dark {
+    background: #17171f;
+}
+
+.journey-text h2,
+.program-section h2,
+.products-section h2 {
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.quote-box {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    font-weight: 700;
+}
+
+/* PROGRAM */
+.program-section {
+    width: 96%;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.program-grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.program-card {
+    height: 215px;
+    border-radius: 12px;
+    background: #171717;
+    color: #d7ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* PRODUCTS */
+.products-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.product-grid {
+    max-width: 780px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    height: 150px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* FOOTER */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    width: 70%;
+    margin: 50px auto 30px;
+    background: #101018;
+    color: white;
+    border-radius: 12px;
+    padding: 45px;
+    text-align: center;
 }

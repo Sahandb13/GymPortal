@@ -1,56 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* NAVBAR */
 .navbar {
-    background: #111;
+    width: 96%;
+    margin: 12px auto 0;
+    background: #101018;
     color: white;
-    padding: 15px 0;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
+    border-radius: 10px 10px 0 0;
+    padding: 14px 24px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-nav a {
     color: white;
-    margin: 0 15px;
-    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.nav-actions a {
-    margin-left: 10px;
+.logo-icon {
+    background: #D7FF00;
+    color: black;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: white;
+    font-size: 14px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-link-small {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .btn-primary {
     background: #D7FF00;
     color: black;
-    padding: 8px 15px;
-    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
 }
 
-.btn-outline {
-    border: 1px solid white;
-    padding: 8px 15px;
-    text-decoration: none;
+.btn-dark {
+    background: white;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* HERO */
+.home-hero {
+    width: 96%;
+    margin: 0 auto;
+    min-height: 620px;
+    background: linear-gradient(135deg, #0c0c14, #1a1a2b);
     color: white;
+    padding: 90px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.hero-left {
+    max-width: 620px;
+}
+
+.tag {
+    display: inline-block;
+    color: #D7FF00;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.home-hero h1 {
+    font-size: 60px;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    font-weight: 800;
+}
+
+.home-hero p {
+    color: #cfcfcf;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 560px;
+}
+
+.hero-buttons {
+    margin-top: 28px;
+    display: flex;
+    gap: 14px;
+}
+
+.person-placeholder {
+    width: 420px;
+    height: 380px;
+    background: #2a2a2a;
+    border: 2px solid #D7FF00;
+    border-radius: 12px;
+    color: #D7FF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* BRAND STRIP */
+.brand-strip {
+    width: 96%;
+    margin: 8px auto 55px;
+    background: #D7FF00;
+    color: black;
+    padding: 18px 35px;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-strip span {
+    font-weight: bold;
+}
+
+.brand-strip strong {
+    font-size: 28px;
+}
+
+/* FEATURES */
+.features {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background: white;
+    padding: 38px;
+    border-radius: 12px;
+    text-align: center;
 }
 
 /* FOOTER */
 .footer {
-    background: #111;
+    width: 96%;
+    margin: 50px auto 30px;
+    background: #101018;
     color: white;
+    padding: 45px;
+    border-radius: 12px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-top h3 {
+    margin: 0;
+    text-align: right;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 18px;
     text-align: center;
-    padding: 20px;
+    font-size: 12px;
+    color: #ccc;
 }
