@@ -1,7 +1,6 @@
-<h1>Sign Up</h1>
-<form>
-    <input placeholder="Email" />
-    <input placeholder="Password" type="password" />
-    <input placeholder="Confirm Password" type="password" />
+<form method="post">
+    <input name="email" placeholder="Email" required />
+    <input name="password" type="password" placeholder="Password" required minlength="6" />
+    <input name="confirm" type="password" placeholder="Confirm Password" required />
     <button class="btn-primary">Become a Member</button>
 </form>
