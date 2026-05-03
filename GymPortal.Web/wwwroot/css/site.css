@@ -83,15 +83,15 @@ a {
 
 /* HERO */
 .hero-figma {
-    min-height: 650px;
+    min-height: 720px;
     background:
-        linear-gradient(135deg, rgba(255,255,255,0.025) 25%, transparent 25%) 0 0 / 28px 28px,
-        linear-gradient(135deg, #111018 0%, #171622 100%);
+        linear-gradient(135deg, rgba(255,255,255,0.03) 25%, transparent 25%) 0 0 / 28px 28px,
+        linear-gradient(135deg, #0f0f18 0%, #181726 100%);
     color: white;
     display: grid;
     grid-template-columns: 1fr 520px;
     align-items: center;
-    padding: 65px 110px 0 235px;
+    padding: 80px 120px 0 180px;
     overflow: hidden;
 }
 
@@ -112,7 +112,7 @@ a {
 }
 
 .hero-figma h1 {
-    font-size: 56px;
+    font-size: 62px;
     line-height: 1.05;
     margin: 0 0 22px;
     letter-spacing: -1px;
@@ -122,18 +122,18 @@ a {
 .hero-figma p {
     max-width: 610px;
     color: #eeeeee;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 }
 
 .hero-checks {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px 45px;
+    gap: 16px 60px;
     font-size: 13px;
     font-weight: 600;
-    margin-bottom: 34px;
+    margin-bottom: 36px;
 }
 
 .hero-checks span::before {
@@ -143,18 +143,18 @@ a {
 }
 
 .hero-line {
-    width: 620px;
+    width: 520px;
     height: 1px;
     background: rgba(255,255,255,0.12);
-    margin-bottom: 34px;
+    margin-bottom: 36px;
 }
 
 .get-started {
     background: #d7ff00;
     color: #111;
-    padding: 15px 27px;
+    padding: 16px 30px;
     border-radius: 999px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
     display: inline-flex;
     gap: 15px;
@@ -162,7 +162,7 @@ a {
 }
 
 .hero-people {
-    height: 620px;
+    height: 650px;
     align-self: end;
     display: flex;
     align-items: flex-end;
@@ -170,29 +170,131 @@ a {
 }
 
 .hero-people img {
-    height: 560px;
-    width: 480px;
+    height: 600px;
+    width: 520px;
     object-fit: cover;
     object-position: center;
 }
 
-/* SECTIONS */
-.lime-strip {
+/* LIME BAR */
+.lime-bar {
     width: 100%;
     background: #d7ff00;
     color: #111;
-    padding: 20px 42px;
+    padding: 22px 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.lime-strip strong {
-    font-size: 30px;
+.logos {
+    display: flex;
+    gap: 40px;
+    font-size: 15px;
+    font-weight: 800;
 }
 
-.feature-grid,
+.lime-bar h2 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+/* ABOUT */
+.about-block {
+    padding: 80px 9%;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-images {
+    display: flex;
+    gap: 18px;
+}
+
+.about-images div {
+    width: 180px;
+    height: 330px;
+    background: #171717;
+    border-radius: 20px;
+    transform: skew(-8deg);
+}
+
+.about-images div:nth-child(2) {
+    margin-top: 50px;
+    background: #303030;
+}
+
+.pill {
+    display: inline-block;
+    background: #111018;
+    color: white;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.about-text h2 {
+    font-size: 46px;
+    line-height: 1.05;
+    margin: 16px 0;
+}
+
+.about-text p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.quote {
+    margin-top: 26px;
+    background: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 16px 35px rgba(0,0,0,.08);
+    font-weight: 700;
+}
+
+/* PROGRAMS */
+.programs {
+    width: 96%;
+    margin: 30px auto;
+    background: white;
+    border-radius: 22px;
+    padding: 70px 9%;
+    text-align: center;
+}
+
+.programs h2 {
+    font-size: 46px;
+    line-height: 1.05;
+    margin: 16px 0;
+}
+
 .program-cards {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.program-cards div {
+    height: 260px;
+    border-radius: 20px;
+    background: #171717;
+    color: #d7ff00;
+    display: flex;
+    align-items: end;
+    padding: 24px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* SHARED */
+.feature-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
