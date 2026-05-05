@@ -1,6 +1,18 @@
+@model GymPortal.Web.Models.RegisterViewModel
+
+<h1>Sign Up</h1>
+
 <form method="post">
-    <input name="email" placeholder="Email" required />
-    <input name="password" type="password" placeholder="Password" required minlength="6" />
-    <input name="confirm" type="password" placeholder="Confirm Password" required />
-    <button class="btn-primary">Become a Member</button>
+    <div asp-validation-summary="All"></div>
+
+    <input asp-for="Email" placeholder="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <input asp-for="Password" type="password" placeholder="Password" />
+    <span asp-validation-for="Password"></span>
+
+    <input asp-for="ConfirmPassword" type="password" placeholder="Confirm Password" />
+    <span asp-validation-for="ConfirmPassword"></span>
+
+    <button class="btn-primary" type="submit">Become a Member</button>
 </form>
