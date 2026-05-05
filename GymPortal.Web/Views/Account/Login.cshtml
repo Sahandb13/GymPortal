@@ -1,15 +1,44 @@
 @model GymPortal.Web.Models.LoginViewModel
 
-<h1>Sign In</h1>
+<section class="auth-page">
+    <div class="auth-card">
+        <h1>Welcome Back!</h1>
 
-<form method="post">
-    <div asp-validation-summary="All"></div>
+        <p class="auth-intro">
+            Log in to continue your fitness journey with full access to your customized program,
+            training history, and progress tracking.
+        </p>
 
-    <input asp-for="Email" placeholder="Email" />
-    <span asp-validation-for="Email"></span>
+        <div class="auth-divider"></div>
 
-    <input asp-for="Password" type="password" placeholder="Password" />
-    <span asp-validation-for="Password"></span>
+        <div class="social-row">
+            <span>G</span>
+            <span>f</span>
+            <span>⌘</span>
+        </div>
 
-    <button class="btn-primary" type="submit">Sign In</button>
-</form>
+        <div class="or-line">
+            <span>OR CONTINUE WITH</span>
+        </div>
+
+        <form method="post">
+            <div asp-validation-summary="All" class="validation"></div>
+
+            <label>Email Address *</label>
+            <input asp-for="Email" placeholder="Enter Email Address" />
+
+            <label>Password</label>
+            <a class="forgot-link" href="#">Forgot your password?</a>
+            <input asp-for="Password" type="password" placeholder="Enter Password" />
+
+            <button class="auth-submit" type="submit">
+                Continue <span>›</span>
+            </button>
+
+            <label class="terms-row">
+                <input type="checkbox" />
+                <span>Accept user terms and conditions</span>
+            </label>
+        </form>
+    </div>
+</section>

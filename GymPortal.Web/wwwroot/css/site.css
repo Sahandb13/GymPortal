@@ -789,3 +789,131 @@ a {
     font-size: 14px;
     color: #ddd;
 }
+/* AI-stöd användes här för att återskapa login-layouten från Figma med centrerat kort och formulärspacing. */
+.auth-page {
+    min-height: calc(100vh - 72px);
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.auth-card {
+    width: 560px;
+    background: white;
+    padding: 48px;
+    border-radius: 6px;
+}
+
+.auth-card h1 {
+    font-size: 34px;
+    margin: 0 0 10px;
+}
+
+.auth-intro {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.auth-divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin-bottom: 35px;
+}
+
+.social-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.social-row span {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.or-line {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #777;
+    font-size: 11px;
+    margin-bottom: 28px;
+}
+
+.or-line::before,
+.or-line::after {
+    content: "";
+    height: 1px;
+    background: #e5e5e5;
+    flex: 1;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card label {
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.auth-card input {
+    height: 42px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 0 14px;
+    margin-bottom: 18px;
+}
+
+.forgot-link {
+    align-self: flex-end;
+    font-size: 11px;
+    color: #d7ff00;
+    margin-top: -24px;
+    margin-bottom: 8px;
+}
+
+.auth-submit {
+    margin-top: 12px;
+    height: 42px;
+    border: none;
+    border-radius: 999px;
+    background: #d7ff00;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.terms-row {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 400 !important;
+    color: #555;
+}
+
+.terms-row input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+.validation {
+    color: #b00020;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
