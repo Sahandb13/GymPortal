@@ -1,33 +1,66 @@
-<h1>My Account</h1>
+<section class="account-page">
+    <h1>My Account</h1>
 
-<p>Email: @ViewBag.Email</p>
+    <div class="account-layout">
+        <aside class="account-sidebar">
+           <img src="/images/aboutme-image.png" alt="Profile image" />
 
-<div class="feature-grid">
+            <div class="account-menu">
+                <a class="active" href="/Account/AboutMe">About Me ›</a>
+                <a href="/Membership">My Membership ›</a>
+                <a href="/Booking/MyBookings">My Booking ›</a>
+                <a href="#">Sign out ›</a>
+            </div>
+        </aside>
 
-    <div class="feature-card">
-        <h3>My Membership</h3>
-        <p>Status: Active</p>
-        <a class="btn-primary" href="/Membership">View Membership</a>
+        <div class="account-main">
+            <div class="account-card">
+                <h2>About Me</h2>
+
+                <form>
+                    <label>Full Name</label>
+                    <input placeholder="Enter First Name" />
+
+                    <label>Last Name</label>
+                    <input placeholder="Enter Last Name" />
+
+                    <label>Email Address</label>
+                    <input value="@ViewBag.Email" />
+
+                    <label>Phone Number</label>
+                    <input placeholder="Enter Phone Number" />
+
+                    <label>Profile Image</label>
+                    <div class="file-row">
+                        <input placeholder="Upload Profile Image" />
+                        <button type="button">Browse</button>
+                    </div>
+
+                    <button class="btn-primary save-btn">Save ›</button>
+                </form>
+            </div>
+
+            <div class="stats-card">
+                <h2>My Statistics</h2>
+
+                <div class="stat-row">
+                    <span>Check-in (last 30 days)</span>
+                    <strong>25</strong>
+                </div>
+                <div class="progress"><div style="width: 75%;"></div></div>
+
+                <div class="stat-row">
+                    <span>Weight Goal</span>
+                    <strong>50%</strong>
+                </div>
+                <div class="progress"><div style="width: 50%;"></div></div>
+
+                <div class="stat-row">
+                    <span>Current BMI</span>
+                    <strong>27</strong>
+                </div>
+                <div class="progress"><div style="width: 65%;"></div></div>
+            </div>
+        </div>
     </div>
-
-    <div class="feature-card">
-        <h3>My Bookings</h3>
-        <p>View and cancel your booked classes.</p>
-        <a class="btn-primary" href="/Booking/MyBookings">View Bookings</a>
-    </div>
-
-    <div class="feature-card">
-        <h3>Profile</h3>
-        <p>Edit your personal information.</p>
-        <a class="btn-dark" href="#">Edit Profile</a>
-    </div>
-
-    <div class="feature-card">
-        <h3>Delete Account</h3>
-        <p>Permanently remove your account.</p>
-        <form method="post" action="/Account/Delete">
-            <button class="btn-dark">Delete</button>
-        </form>
-    </div>
-
-</div>
+</section>

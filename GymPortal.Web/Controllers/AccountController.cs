@@ -41,7 +41,9 @@ namespace GymPortal.Web.Controllers
             var user = new ApplicationUser
             {
                 UserName = model.Email,
-                Email = model.Email
+                Email = model.Email,
+                FirstName = "New",
+                LastName = "Member"
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
