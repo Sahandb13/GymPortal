@@ -676,3 +676,65 @@ a {
 .faq-item {
     margin-top: 20px;
 }
+
+.membership-page {
+    padding: 50px 16%;
+}
+
+.membership-grid {
+    max-width: 760px;
+    margin: 40px auto 0;
+    grid-template-columns: 1fr 1fr 1.05fr;
+    gap: 18px;
+}
+
+.membership-card,
+.membership-highlight {
+    min-height: 310px;
+    padding: 24px;
+}
+
+.membership-card h3,
+.membership-highlight h3 {
+    font-size: 14px;
+}
+
+.membership-card li,
+.membership-card p,
+.membership-highlight p {
+    font-size: 12px;
+}
+
+.membership-highlight img {
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.faq-section {
+    padding: 70px 16%;
+}
+
+.faq-layout {
+    max-width: 760px;
+    margin: 0 auto;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+}
+
+.faq-layout img {
+    height: 310px;
+    object-fit: cover;
+}
+
+.faq-text h2 {
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.faq-item {
+    font-size: 13px;
+}
+
+.footer {
+    max-width: 760px;
+}
