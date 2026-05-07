@@ -10,6 +10,11 @@ namespace GymPortal.Web.Controllers
 {
     public class MembershipController : Controller
     {
+
+        /* =====================================================
+                              MEDLEMSKAP
+        ===================================================== */
+
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
@@ -21,10 +26,20 @@ namespace GymPortal.Web.Controllers
             _userManager = userManager;
         }
 
+
+        /* =====================================================
+                            MEDLEMSKAPSSIDAN
+        ===================================================== */
+
         public IActionResult Index()
         {
             return View();
         }
+
+
+        /* =====================================================
+                            MITT MEDLEMSKAP
+        ===================================================== */
 
         [Authorize]
         public async Task<IActionResult> MyMembership()
@@ -40,6 +55,12 @@ namespace GymPortal.Web.Controllers
             return View(membership);
         }
 
+
+        /* =====================================================
+                            SKAPA MEDLEMSKAP
+        ===================================================== */
+
+        // AI-stöd användes för att strukturera kopplingen mellan användare och medlemskap.
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create(string type)

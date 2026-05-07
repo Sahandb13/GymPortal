@@ -11,6 +11,11 @@ namespace GymPortal.Web.Controllers
     [Authorize]
     public class BookingController : Controller
     {
+
+        /* =====================================================
+                               BOKNINGAR
+        ===================================================== */
+
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
@@ -21,6 +26,11 @@ namespace GymPortal.Web.Controllers
             _context = context;
             _userManager = userManager;
         }
+
+
+        /* =====================================================
+                            MINA BOKNINGAR
+        ===================================================== */
 
         public async Task<IActionResult> MyBookings()
         {
@@ -34,6 +44,12 @@ namespace GymPortal.Web.Controllers
             return View(bookings);
         }
 
+
+        /* =====================================================
+                               BOKA PASS
+        ===================================================== */
+
+        // AI-stöd användes för att kontrollera så samma pass inte bokas flera gånger.
         [HttpPost]
         public async Task<IActionResult> Create(int gymClassId)
         {
@@ -57,6 +73,11 @@ namespace GymPortal.Web.Controllers
 
             return RedirectToAction("MyBookings");
         }
+
+
+        /* =====================================================
+                              AVBOKA PASS
+        ===================================================== */
 
         [HttpPost]
         public async Task<IActionResult> Cancel(int id)

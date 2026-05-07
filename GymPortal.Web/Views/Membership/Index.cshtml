@@ -1,10 +1,14 @@
+<!-- =====================================================
+                    MEDLEMSKAP
+====================================================== -->
+
 <section class="membership-page">
 
     <h1>Our Membership Offers</h1>
 
     <div class="membership-grid">
 
-        <!-- CARD 1 -->
+        <!-- Standard membership -->
         <div class="membership-card">
 
             <h3>Standard Membership</h3>
@@ -20,22 +24,19 @@
                 <span>/Monthly</span>
             </div>
 
-            <!-- Skapar Standard membership -->
+            <!-- AI-stöd användes för att koppla formuläret till MembershipController -->
             <form method="post" action="/Membership/Create">
-
-                <input type="hidden"
-                       name="type"
-                       value="Standard" />
+                <input type="hidden" name="type" value="Standard" />
 
                 <button class="btn-primary" type="submit">
                     Join Now ›
                 </button>
-
             </form>
 
         </div>
 
-        <!-- CARD 2 -->
+
+        <!-- Premium membership -->
         <div class="membership-card">
 
             <h3>Premium Membership</h3>
@@ -51,22 +52,18 @@
                 <span>/Monthly</span>
             </div>
 
-            <!-- Skapar Premium membership -->
             <form method="post" action="/Membership/Create">
-
-                <input type="hidden"
-                       name="type"
-                       value="Premium" />
+                <input type="hidden" name="type" value="Premium" />
 
                 <button class="btn-primary" type="submit">
                     Join Now ›
                 </button>
-
             </form>
 
         </div>
 
-        <!-- CARD 3 -->
+
+        <!-- Contact card -->
         <div class="membership-highlight">
 
             <h3>Get Your Membership</h3>
@@ -77,17 +74,12 @@
 
             <strong>+46 8 410 510 90</strong>
 
-            <!-- Skapar Premium membership -->
             <form method="post" action="/Membership/Create">
-
-                <input type="hidden"
-                       name="type"
-                       value="Premium" />
+                <input type="hidden" name="type" value="Premium" />
 
                 <button class="btn-primary" type="submit">
                     Call Us Today ›
                 </button>
-
             </form>
 
             <img src="/images/membership1.png"
@@ -100,7 +92,10 @@
 </section>
 
 
-<!-- FAQ SECTION -->
+<!-- =====================================================
+                        FAQ
+====================================================== -->
+
 <section class="faq-section">
 
     <div class="faq-layout">
@@ -110,7 +105,9 @@
 
         <div class="faq-text">
 
-            <h2>Common questions about gym and training</h2>
+            <h2>
+                Common questions about gym and training
+            </h2>
 
             <div class="faq-item">
 
