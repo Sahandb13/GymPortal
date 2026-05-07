@@ -1,6 +1,7 @@
-/* =========================
-   Base
-========================= */
+/* =====================================================
+                         GRUNDSTIL
+===================================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -16,11 +17,12 @@ a {
     text-decoration: none;
 }
 
-/* =========================
-   Navigation
-========================= */
 
-/* AI-stöd användes här för att strukturera upp navigationen i tre delar: brand, main nav och right side. Det gjorde det lättare att få en konsekvent layout och spacing. */    
+/* =====================================================
+                         NAVIGATION
+===================================================== */
+
+/* AI-stöd användes för att dela upp navigationen i brand, meny och högerdel. */
 .top-nav {
     width: 100%;
     height: 72px;
@@ -74,9 +76,11 @@ a {
     gap: 28px;
 }
 
-/* =========================
-   Buttons
-========================= */
+
+/* =====================================================
+                         KNAPPAR
+===================================================== */
+
 .signin-btn,
 .btn-primary,
 .get-started,
@@ -87,6 +91,7 @@ a {
     font-weight: 800;
     display: inline-flex;
     align-items: center;
+    border: none;
 }
 
 .signin-btn {
@@ -112,11 +117,15 @@ a {
     border-radius: 30px;
     font-weight: bold;
     display: inline-block;
+    border: none;
 }
 
-/* =========================
-   Home page
-========================= */
+
+/* =====================================================
+                         STARTSIDA
+===================================================== */
+
+/* AI-stöd användes för att få hero-sektionens spacing närmare Figma. */
 .hero-figma {
     min-height: 720px;
     background:
@@ -130,7 +139,6 @@ a {
     overflow: hidden;
 }
 
-/* AI-stöd användes här för att strukturera om hero-layouten och få spacing närmare Figma. */
 .hero-content {
     max-width: 650px;
     margin-top: -20px;
@@ -209,6 +217,11 @@ a {
     object-fit: contain;
 }
 
+
+/* =====================================================
+                         LIME BAR
+===================================================== */
+
 .lime-bar {
     width: 100%;
     background: #d7ff00;
@@ -231,6 +244,11 @@ a {
     font-size: 34px;
     font-weight: 900;
 }
+
+
+/* =====================================================
+                         ABOUT
+===================================================== */
 
 .about-figma {
     background: #f4f4f4;
@@ -317,13 +335,22 @@ a {
     font-weight: 800;
 }
 
+
+/* =====================================================
+                    PROGRAM OCH PRODUKTER
+===================================================== */
+
+.programs-figma,
+.products-figma {
+    width: 92%;
+    margin: 50px auto;
+    text-align: center;
+}
+
 .programs-figma {
     background: white;
-    margin: 40px auto;
-    width: 92%;
     border-radius: 20px;
     padding: 70px 60px;
-    text-align: center;
 }
 
 .programs-figma h2,
@@ -335,15 +362,23 @@ a {
     font-weight: 800;
 }
 
-.program-grid {
+.program-grid,
+.product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
 }
 
-.program-card {
-    height: 260px;
-    border-radius: 18px;
+.program-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.program-card,
+.product-card {
     background: white;
     display: flex;
     align-items: center;
@@ -351,11 +386,27 @@ a {
     overflow: hidden;
 }
 
-.program-card img {
+.program-card {
+    height: 260px;
+    border-radius: 18px;
+}
+
+.product-card {
+    height: 160px;
+    border-radius: 16px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.program-card img,
+.product-card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 18px;
+}
+
+.product-card img {
+    padding: 20px;
 }
 
 .program-sub,
@@ -365,41 +416,12 @@ a {
     color: #666;
 }
 
-.products-figma {
-    width: 92%;
-    margin: 50px auto;
-    text-align: center;
-}
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
+/* =====================================================
+                         ACCOUNT
+===================================================== */
 
-.product-card {
-    height: 160px;
-    border-radius: 16px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    overflow: hidden;
-}
-
-.product-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 20px;
-}
-
-/* =========================
-   Account page
-========================= */
-/* AI-stöd användes här för att strukturera upp account-sidan i tre sektioner: sidebar, main content och stats. Det gjorde det lättare att få en konsekvent layout och spacing. */
+/* AI-stöd användes för att dela upp kontosidan i sidomeny, innehåll och statistik. */
 .account-page {
     padding: 40px 12%;
     background: #f4f4f4;
@@ -476,22 +498,9 @@ a {
     border-radius: 5px;
 }
 
-.file-row {
-    display: grid;
-    grid-template-columns: 1fr 90px;
-    gap: 10px;
-}
-
-.file-row button {
-    border: none;
-    background: #ddd;
-    border-radius: 5px;
-}
-
 .save-btn {
     margin-top: 20px;
     align-self: flex-end;
-    border: none;
 }
 
 .stats-card {
@@ -518,9 +527,11 @@ a {
     border-radius: 10px;
 }
 
-/* =========================
-   Membership and FAQ
-========================= */
+
+/* =====================================================
+                    MEDLEMSKAP OCH FAQ
+===================================================== */
+
 .membership-page {
     padding: 50px 16%;
     text-align: center;
@@ -613,9 +624,11 @@ a {
     font-size: 13px;
 }
 
-/* =========================
-   Customer service
-========================= */
+
+/* =====================================================
+                       KUNDSERVICE
+===================================================== */
+
 .service-page {
     padding: 50px 16% 20px;
     text-align: center;
@@ -647,8 +660,9 @@ a {
     height: 100%;
     object-fit: cover;
 }
-/* AI-stöd användes här för att skapa kontakt-badges som ligger över bilden och innehåller kontaktinfo. */
-.contact-badges { 
+
+/* AI-stöd användes för kontakt-badges över bilden. */
+.contact-badges {
     position: absolute;
     left: 22px;
     right: 22px;
@@ -673,7 +687,6 @@ a {
     color: #ddd;
 }
 
-/* AI-stöd användes här för att städa upp formulärets grid och göra CSS:en mer konsekvent. */
 .contact-form-card {
     background: white;
     border-radius: 12px;
@@ -713,83 +726,11 @@ a {
     margin-bottom: 20px;
 }
 
-/* =========================
-   Shared cards
-========================= */
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
 
-.feature-card {
-    background: white;
-    padding: 38px;
-    border-radius: 12px;
-    text-align: center;
-}
+/* =====================================================
+                         AUTH
+===================================================== */
 
-/* =========================
-   Footer
-========================= */
-.footer {
-    width: 96%;
-    max-width: 1060px;
-    margin: 50px auto 30px;
-    background: #101018;
-    color: white;
-    padding: 50px;
-    border-radius: 12px;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 35px;
-    border-bottom: 1px solid rgba(215,255,0,0.2);
-}
-
-.footer-title {
-    max-width: 620px;
-    text-align: right;
-    font-size: 28px;
-    line-height: 1.25;
-    margin: 0;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 80px;
-    padding: 45px 0;
-    border-bottom: 1px solid rgba(215,255,0,0.2);
-}
-
-.footer-location p,
-.footer-hours p {
-    color: #e5e5e5;
-}
-
-.footer-hours {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: right;
-}
-
-.map-pin {
-    font-size: 42px;
-    margin: 20px 0 10px;
-}
-
-.copyright {
-    margin: 30px 0 0;
-    text-align: center;
-    font-size: 14px;
-    color: #ddd;
-}
-/* AI-stöd användes här för att återskapa login-layouten från Figma med centrerat kort och formulärspacing. */
 .auth-page {
     min-height: calc(100vh - 72px);
     background: #f4f4f4;
@@ -799,6 +740,7 @@ a {
     padding: 80px 20px;
 }
 
+/* AI-stöd användes för att återskapa login/register-korten från Figma. */
 .auth-card {
     width: 560px;
     background: white;
@@ -902,8 +844,9 @@ a {
     display: flex;
     justify-content: center;
     gap: 8px;
-    font-weight: 400 !important;
     color: #555;
+    font-size: 12px;
+    font-weight: 400 !important;
 }
 
 .terms-row input {
@@ -917,21 +860,100 @@ a {
     font-size: 13px;
     margin-bottom: 15px;
 }
+
 .auth-note {
     text-align: center;
     color: #777;
     font-size: 12px;
     margin-top: 18px;
 }
-.terms-row {
-    margin-top: 18px;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    color: #555;
-    font-size: 12px;
+
+
+/* =====================================================
+                      DELADE KORT
+===================================================== */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
-/* AI-stöd användes här för att justera layout och spacing så sidan matchar Figma visuellt */
+
+.feature-card {
+    background: white;
+    padding: 38px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+/* =====================================================
+                         FOOTER
+===================================================== */
+
+.footer {
+    width: 96%;
+    max-width: 1060px;
+    margin: 50px auto 30px;
+    background: #101018;
+    color: white;
+    padding: 50px;
+    border-radius: 12px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(215,255,0,0.2);
+}
+
+.footer-title {
+    max-width: 620px;
+    text-align: right;
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 80px;
+    padding: 45px 0;
+    border-bottom: 1px solid rgba(215,255,0,0.2);
+}
+
+.footer-location p,
+.footer-hours p {
+    color: #e5e5e5;
+}
+
+.footer-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: right;
+}
+
+.map-pin {
+    font-size: 42px;
+    margin: 20px 0 10px;
+}
+
+.copyright {
+    margin: 30px 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+/* =====================================================
+                         404 / ERROR
+===================================================== */
+
 .notfound-page {
     min-height: 75vh;
     display: flex;
@@ -940,6 +962,7 @@ a {
     background: #f4f4f4;
 }
 
+/* AI-stöd användes för att centrera och justera 404-sidan mot Figma. */
 .notfound-content {
     text-align: center;
     max-width: 600px;
