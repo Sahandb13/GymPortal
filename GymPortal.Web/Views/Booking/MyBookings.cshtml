@@ -1,9 +1,36 @@
+@model List<GymPortal.Domain.Entities.Booking>
+
 <h1>My Bookings</h1>
 
-<div class="feature-grid">
-    <div class="feature-card">
-        <h3>Personal Training</h3>
-        <p>Today 17:00 · Coach Anna</p>
-        <a class="btn-dark" href="#">Cancel Booking</a>
+@if (!Model.Any())
+{
+    <p>No bookings found.</p>
+}
+else
+{
+    <div class="feature-grid">
+
+        @foreach (var booking in Model)
+        {
+            <div class="feature-card">
+
+                <h3>@booking.GymClass.Name</h3>
+
+                <p>
+                    @booking.GymClass.Date.ToShortDateString()
+                    · Coach @booking.GymClass.Instructor
+                </p>
+
+                <form method="post" action="/Booking/Cancel">
+                    <input type="hidden" name="id" value="@booking.Id" />
+
+                    <button class="btn-primary" type="submit">
+                        Cancel Booking
+                    </button>
+                </form>
+
+            </div>
+        }
+
     </div>
-</div>
+}

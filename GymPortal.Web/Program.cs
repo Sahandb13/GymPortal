@@ -1,3 +1,4 @@
+using GymPortal.Domain.Entities;
 using GymPortal.Infrastructure.Data;
 using GymPortal.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
@@ -28,10 +29,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseStatusCodePages(async context =>
-{
-    context.HttpContext.Response.Redirect("/Home/NotFound");
-});
+app.UseStatusCodePagesWithReExecute("/Home/NotFound");
 
 app.UseRouting();
 
@@ -42,6 +40,35 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.UseStatusCodePagesWithReExecute("/Home/NotFound");
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    if (!db.GymClasses.Any())
+    {
+        db.GymClasses.AddRange(
+            new GymClass
+            {
+                Name = "Personal Training",
+                Date = DateTime.Today.AddDays(1),
+                Instructor = "Sahand"
+            },
+            new GymClass
+            {
+                Name = "Group Training",
+                Date = DateTime.Today.AddDays(2),
+                Instructor = "Sina"
+            },
+            new GymClass
+            {
+                Name = "Strength Class",
+                Date = DateTime.Today.AddDays(3),
+                Instructor = "Sasan"
+            }
+        );
+
+        db.SaveChanges();
+    }
+}
 
 app.Run();
