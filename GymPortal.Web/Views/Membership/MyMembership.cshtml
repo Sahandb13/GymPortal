@@ -1,0 +1,46 @@
+@model GymPortal.Domain.Entities.Membership?
+
+<section class="membership-page">
+
+    <h1>My Membership</h1>
+
+    @if (Model == null)
+    {
+        <div class="feature-card">
+            <h3>No Membership Found</h3>
+
+            <p>
+                You do not have an active membership yet.
+            </p>
+
+            <a href="/Membership" class="btn-primary">
+                Choose Membership ›
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="feature-card">
+
+            
+           <h2>Membership</h2>
+
+            <p>
+                Status:
+                @(Model.IsActive ? "Active" : "Expired")
+            </p>
+
+            <p>
+                Start Date:
+                @Model.StartDate.ToShortDateString()
+            </p>
+
+            <p>
+                End Date:
+                @Model.EndDate.ToShortDateString()
+            </p>
+
+        </div>
+    }
+
+</section>
