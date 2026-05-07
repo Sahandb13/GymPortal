@@ -1,21 +1,24 @@
+@model List<GymPortal.Domain.Entities.GymClass>
+
 <h1>Training Classes</h1>
 
 <div class="feature-grid">
-    <div class="feature-card">
-        <h3>Personal Training</h3>
-        <p></p>
-        <a class="btn-primary" href="#">Book Class</a>
-    </div>
+    @foreach (var gymClass in Model)
+    {
+        <div class="feature-card">
+            <h3>@gymClass.Name</h3>
 
-    <div class="feature-card">
-        <h3>Group Training</h3>
-        <p></p>
-        <a class="btn-primary" href="#">Book Class</a>
-    </div>
+            <p>
+                @gymClass.Date.ToShortDateString()
+                · Coach @gymClass.Instructor
+            </p>
 
-    <div class="feature-card">
-        <h3></h3>
-        <p>Friday 16:00 · Coach Sara</p>
-        <a class="btn-primary" href="#">Book Class</a>
-    </div>
+            <form method="post" action="/Booking/Create">
+                <input type="hidden" name="gymClassId" value="@gymClass.Id" />
+                <button class="btn-primary" type="submit">
+                    Book Class
+                </button>
+            </form>
+        </div>
+    }
 </div>
