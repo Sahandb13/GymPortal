@@ -6,6 +6,7 @@
 
         <!-- CARD 1 -->
         <div class="membership-card">
+
             <h3>Standard Membership</h3>
 
             <ul>
@@ -19,11 +20,19 @@
                 <span>/Monthly</span>
             </div>
 
-            <a class="btn-primary">Join Now ›</a>
+            <form method="post" action="/Membership/Create">
+                <input type="hidden" name="type" value="Standard" />
+
+                <button class="btn-primary" type="submit">
+                    Join Now ›
+                </button>
+            </form>
+
         </div>
 
         <!-- CARD 2 -->
         <div class="membership-card">
+
             <h3>Premium Membership</h3>
 
             <ul>
@@ -37,19 +46,37 @@
                 <span>/Monthly</span>
             </div>
 
-            <a class="btn-primary">Join Now ›</a>
+            <form method="post" action="/Membership/Create">
+                <input type="hidden" name="type" value="Premium" />
+
+                <button class="btn-primary" type="submit">
+                    Join Now ›
+                </button>
+            </form>
+
         </div>
 
         <!-- CARD 3 -->
         <div class="membership-highlight">
+
             <h3>Get Your Membership</h3>
-            <p>Call us today and get access to all our training programs.</p>
+
+            <p>
+                Call us today and get access to all our training programs.
+            </p>
 
             <strong>+46 8 410 510 90</strong>
 
-            <a class="btn-primary">Call Us Today ›</a>
+            <form method="post" action="/Membership/Create">
+                <input type="hidden" name="type" value="Premium" />
 
-            <img src="/images/membership1.png" />
+                <button class="btn-primary" type="submit">
+                    Call Us Today ›
+                </button>
+            </form>
+
+            <img src="/images/membership1.png" alt="Membership image" />
+
         </div>
 
     </div>
@@ -65,11 +92,15 @@
         <img src="/images/membership2.png" alt="Gym training" />
 
         <div class="faq-text">
+
             <h2>Common questions about gym and training</h2>
 
             <div class="faq-item">
                 <strong>Do I need prior gym experience?</strong>
-                <p>No, our trainers help beginners and advanced users.</p>
+
+                <p>
+                    No, our trainers help beginners and advanced users.
+                </p>
             </div>
 
             <div class="faq-item">
